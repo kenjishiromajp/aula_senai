@@ -1,0 +1,8 @@
+media_queries
+---------
+Expressões utilizadas no CSS3 que limita o escopo da folha de estilo, podendo utilizar expressões que verificam a largura, altura ou se é para impressão.
+
+oratória:
+------
+Antes de falarmos sobre media queries, vamos entender porque que é importante aprender sobre eles ok? Hoje, por onde você acessa um site por onde? (smartphones, TVs, desktops, tablets) de diferentes dispositivos certo? E a visualização dos sites são as mesmas? se eu entrar no G1 pelo desktop é a mesma que a do celular? Isso mesmo o site se adapta ao dispositivo que está acessando o conteúdo. Chamamos sites que conseguem fazer este tipo de adaptação, de sites responsivos. Mas o que que o Media-queries tem a ver com tudo isso? Media queries é o cara que torna a responsividade possível nos sites.
+E como isso funciona? Você já viu o significado de Media Query? Consulta de Mídia, o que você entende como consulta? procura informações de algo certo? neste caso estamos consultando a mídia que estamos trabalhando. Com elas podemos dizer que a folha de estilo vai obedecer tais regras ao chegar em uma resolução menor que 1140 ou 320 para formatarmos o layout de uma forma diferente

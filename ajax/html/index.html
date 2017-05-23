@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula Ajax</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+        .flex-column{
+            display: flex;
+            flex-direction: column;
+        }
+        .flex-column.-align-center{
+            align-items: center;
+        }
+        .flex-column.-justify-center{
+            justify-content: center;
+        }
+        form input{
+            display: block;
+        }
+        form .form-group{
+            margin-bottom: 5px;
+        }
+        #meuFormulario{
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    
+    <form id="meuFormulario" class="flex-column -align-center -justify-center">
+        <div class="form-group">
+            <label for="cep">CEP</label>
+            <input id="cep" type="text" name="cep" value="">
+        </div>
+    
+        <div class="form-group">
+            <label for="logradouro">LOGRADOURO</label>
+            <input id="logradouro" type="text" name="logradouro" value="">
+        </div>
+
+        <div class="form-group">
+            <label for="complemento">COMPLEMENTO</label>
+            <input id="complemento" type="text" name="complemento" value="">
+        </div>
+
+        <div class="form-group">
+            <label for="bairro">BAIRRO</label>
+            <input id="bairro" type="text" name="bairro" value="">
+        </div>
+
+        <div class="form-group">
+            <label for="localidade">LOCALIDADE</label>
+            <input id="localidade" type="text" name="localidade" value="">
+        </div>
+
+        <div class="form-group">
+            <label for="uf">UF</label>
+            <input id="uf" type="text" name="uf" value="">
+        </div>
+
+        <div class="form-group">
+            <label for="unidade">UNIDADE</label>
+            <input id="unidade" type="text" name="unidade" value="">
+        </div>
+
+        <div class="form-group">
+            <label for="ibge">IBGE</label>
+            <input id="ibge" type="text" name="ibge" value="">
+        </div>
+
+        <div class="form-group">
+            <label for="gia">GIA</label>
+            <input id="gia" type="text" name="gia" value="">
+        </div>
+    </form>
+
+    <script>
+        cep.onblur=function(){
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET","https://viacep.com.br/ws/"+cep.value+"/json/",true);
+            xhr.onload=function(result){
+                var txt= result.target.response;
+                var json = JSON.parse(txt);
+                for(key in json){
+                    document.getElementById(key).value = json[key];
+                }
+            }
+            xhr.send();
+        }
+    </script>
+</body>
+</html>

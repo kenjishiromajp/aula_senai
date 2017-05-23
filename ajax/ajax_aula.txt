@@ -1,0 +1,16 @@
+ajax
+---------
+Abreviação para Asynchronous Javascript and XML, para fazer requisições assíncronas sem que faça um refresh na página.
+
+
+oratória:
+------
+O que é o AJAX? qual a importancia dele? É uma técnica utilizada na programação para tornar possível pegar informações do servidor sem ter que dê um "refresh" na página.
+Por exemplo no google você percebeu que a página não "pisca" quando você pesquisa algo? pois ele está fazendo AJAX por traz, para que não aconteça essa piscada, fazendo com que a navegação fique mais fluida.
+Já viu que no facebook por exemplo quando se chega no fim da página ele carrega novos posts, mas a página não pisca? E também você já viu aqueles formulários que você preenche o CEP e já preenche todo o formulário para você? por trás eles estão utilizando a técnica do AJAX para pegar essas informações do servidor e colocando no formulário para você!
+Mas e como isso tudo funciona? AJAX é uma acrônimo de Asynchronous javascript and XML, em português seria XML e javascript assíncrono, que pode ser traduzido também como Requisição Assíncrona. Mas o que seria requisição? e o que seria assincronia? vamos aos passos, primeiro pela requisição, quando alguem requisita algo, o que ela está fazendo? ela está pedindo algo certo? requisição na programação é a mesma coisa, só que ao envés de pedir algo para uma pessoa, ele pede para um servidor. Quando você coloca seu email e senha e aperta entrar, você está fazendo uma requisição, você está mandando as informações email e senha e o servidor vai te falar se pode ou não pode entrar no facebook.
+E exatamente essa assincronia que torna isso possível. vocês sabem o que é assincronia? se eu dissesse que a dupla de competidores estão em sincronia o que seria? eles estão executando a tarefa em sincronia ou seja em harmonia, com mesmos padrões certo? A assincronia é o contrário seria se ele não executasse com os mesmos padrões.
+Vamos falar isso em nível de programação.
+Normalmente linhas de códigos são executados de cima para baixo, enquanto não chegar na ultima linha a pagina fica congelada. Agora imagine no facebook que toda vez que quando você chega lá embaixo da página ele carrega novos posts, e a página ficasse congelado, chato né? mas com ajax não, por mais que eu peça para carregar novos posts, ele não congela a tela, pois ele fica em outro plano de execução.
+
+Agora como isso funciona no javascript? vamos exemplificar aqui utilizando esse exemplo de formulário, em que ao informar o meu cep. Ele preencherá os dados do formulário automaticamente para nós.

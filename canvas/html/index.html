@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula Ajax</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    
+    <canvas id="meuCanvas" width="500" height="500"></canvas>
+    <a id="botaoBaixar" href="" download="minhaFoto"> BAIXAR IMAGEM</a>
+
+    <script>
+        var ctx = meuCanvas.getContext("2d");
+        var imgMolde = new Image();
+        var imgFoto = new Image();
+
+        imgMolde.onload=function(){
+            imgFoto.onload=juntarImagens;
+            imgFoto.src = "imgs/imagem_teste.png";    
+        }
+        imgMolde.src = "imgs/molde.png";
+
+        function juntarImagens(){
+            ctx.drawImage(imgFoto,0,0,500,500);
+            ctx.drawImage(imgMolde,0,0,500,500);
+            var base64 = meuCanvas.toDataURL();
+            botaoBaixar.href=base64;
+        }        
+
+
+    </script>
+</body>
+</html>
